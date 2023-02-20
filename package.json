@@ -1,0 +1,12 @@
+{
+  "name": "automagic",
+  "version": "1.0.0",
+  "description": "automation for sherpany",
+  "main": "index.js",
+  "scripts": {},
+  "author": "amahu",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.30.0"
+  }
+}
