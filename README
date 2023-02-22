@@ -1,13 +1,19 @@
 Hello to you,
 
 AUTOMATION:
+intall everything with:
+npm install
 
 In order to run tests run:
-npx playwright test
-in the automagic folder.
+npx playwright test e2e
+in the automagic folder
 
 In order to view report run:
 npx playwright show-report
+
+FAQ:
+Q1: Why does the browser not start?
+A1: When this happens run 'npx playwright install' in the automagic folder
 
 MANUAL:
 Test cases are in folder: automagic\manual\TestCases
