@@ -57,9 +57,11 @@ export class LoginPassword {
 
     public async login(email?: string, password?: string) {
         if (email) {
+            await this.emailInput.clear();
             await this.emailInput.type(email);
         }
         if (password) {
+            await this.emailInput.clear();
             await this.passwordInput.type(password);
         }
         await this.loginButton.click();

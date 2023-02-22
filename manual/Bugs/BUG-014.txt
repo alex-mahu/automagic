@@ -1,0 +1,21 @@
+BUG-014
+
+Summary: [Accessibility] User can not close the "Meeting date" or "Created on" popovers using ESC
+
+Severity: Medium
+Priority: Minor
+
+Description:
+When the user presses ESC to close the "Meeting date" or "Created on" popovers nothing happens
+
+Steps to reproduce:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Click on the "Meeting date" or "Created on" filters
+4. Press ESC
+
+Expected behavior:
+Popovers close and focus is returned to the filter field that was open
+
+Actual behavior:
+The popovers do not close

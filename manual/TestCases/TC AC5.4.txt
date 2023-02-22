@@ -1,0 +1,13 @@
+TC AC5.4
+
+Description:
+On date pickers start date is not updated when user hovers over dates for "Created on" and there is a start date selected
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Click on the "Created on" date picker button
+4. Click on a date (ex: 12 Jan 2023)
+5. Hove mouse over other dates
+
+Expected: start date no longer updates, remains fixed on the selected date (ex: 12 Jan 2023)

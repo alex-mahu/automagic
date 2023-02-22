@@ -1,0 +1,16 @@
+TC AC1.1
+
+Description:
+User should not be able to select dates for "Meeting date" future to past
+
+Precondition: Make sure you have at least one topic with meeting date today
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Click on the "Meeting date" date picker button
+	-> Date Picker appears
+4. Select first Date tomorrow
+5. Select second Date yesterday
+
+Expected: Start date selection is set to the selected date

@@ -1,0 +1,12 @@
+TC AC5.3
+
+Description:
+On date pickers start date is updated when user hovers over dates for "Created on"
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Click on the "Created on" date picker button
+5. Hove mouse over dates (12 Jan 2023)
+
+Expected: start date updates with the date the user hover the mouse over (ex 12 Jan 2023)

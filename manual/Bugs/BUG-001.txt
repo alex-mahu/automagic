@@ -1,0 +1,24 @@
+BUG-001
+
+Summary: When returning to "Topic Hub" the filters are no persisted
+
+Severity: Medium
+Priority: Medium
+
+Preconditions:
+Have any filter applied to the "Topic Hub"
+
+Description:
+When the user refreshes or leaves the "Topic Hub" module the application will not remember the previous filter
+
+Steps to reproduce:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Apply ANY filter
+4. Refresh the page (or reselect room)
+
+Expected behavior:
+Filter is persisted
+
+Actual behavior:
+Filter is not persisted

@@ -55,6 +55,7 @@ export class LoginSso {
 
     public async login(email?: string) {
         if (email) {
+            await this.emailInput.clear();
             await this.emailInput.type(email);
         }
         await this.loginButton.click();

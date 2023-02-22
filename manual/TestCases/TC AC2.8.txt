@@ -1,0 +1,17 @@
+TC AC2.8
+
+Description:
+Using a shortcut while a date selection is active sets start and end dates correctly for Meeting Date - "Next 7 days"
+
+Precondition: Make sure you have:
+1 - TopicX with no meeting date selected
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Open the filter for "Meeting Date"
+5. And select "No date" from shortcuts
+
+Expected:
+1. "No date" appears as filter and no dates appear as selected when reopening filter
+2. TopicX is displayed

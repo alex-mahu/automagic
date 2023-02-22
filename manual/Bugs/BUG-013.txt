@@ -1,0 +1,22 @@
+BUG-013
+
+Summary: [Accessibility] Focus from field is lost when user presses ESC
+
+Severity: Major
+Priority: Minor
+
+Description:
+When the user presses ESC to close the Requester dropdown (or any dropdown from filters) the focus is lost to the tab
+
+Steps to reproduce:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Click on more to expand the more filters
+4. Click on "Requester" (or "Requesting group" or "Meeting" or "Status")
+5. Press ESC
+
+Expected behavior:
+Focus is returned to the previous field
+
+Actual behavior:
+Focus is witched to the tab

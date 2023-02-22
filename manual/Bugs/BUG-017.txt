@@ -1,0 +1,19 @@
+BUG-017
+
+Summary: [Automation] the position for language selection component is not relative and moves out of view when started with default automation screen size
+
+Severity: Minor
+Priority: Major
+
+Description:
+We noticed that the language selection component is not visible when the automation framework accesses the landing page with default screen size
+
+Steps to reproduce:
+1. Reach the login page using the automation framework (no viewport settings)
+2. Observe the language selection component
+
+Expected behavior:
+Language selection component is in view
+
+Actual behavior:
+Language selection component is not in view

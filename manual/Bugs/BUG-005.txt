@@ -1,0 +1,27 @@
+BUG-005
+
+Summary: Trying to print document does not work even if the document has permission
+
+Severity: Medium
+Priority: Minor
+
+Preconditions:
+Have a topic created with name "Topic1" with a pdf document with security levels 1 or 2
+
+Description:
+When the user tries to print a document with correct security levels, the application will try to print an empty document
+
+Steps to reproduce:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Select the "Topic1" topic
+4. Scroll to the pdf document
+5. Click on it
+6. Rightclick on the document
+7. Select Print...
+
+Expected behavior:
+The browser shows the pdf to be printed
+
+Actual behavior:
+The browser shows part of the page with an empty screen

@@ -1,0 +1,27 @@
+BUG-015
+
+Summary: User can comment with new lines or spaces
+
+Severity: Minor
+Priority: Minor
+
+Description:
+When commenting on a topic the user can comment with new lines or spaces
+
+Precondition:
+Have one topic created "Topic1"
+
+Steps to reproduce:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Select "Topic1"
+4. Choose "Comments" tab
+5. Click "Add comment"
+6. Reply with new line
+7. Reply with space
+
+Expected behavior:
+6,7 Error message "Field cannot be empty"
+
+Actual behavior:
+6,7 Comments are added

@@ -1,0 +1,24 @@
+BUG-002
+
+Summary: Global search does not produce results
+
+Severity: Major
+Priority: Major
+
+Preconditions:
+Have a topic created with name "Topic1"
+
+Description:
+When the user uses the global search, it will produce no results
+
+Steps to reproduce:
+1. Login to the application
+2. In the to bar, click on the magnifying glass (next to profile image)
+3. Enter text "Topic1"
+4. Press Enter
+
+Expected behavior:
+Topic1 is displayed
+
+Actual behavior:
+Search produces no results

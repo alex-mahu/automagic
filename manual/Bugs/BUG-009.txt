@@ -1,0 +1,28 @@
+BUG-009
+
+Summary: There is NO concurrency modification checks
+
+Severity: Major
+Priority: Major
+
+Preconditions: Have a topic created ("Topic 1")
+Be logged in 2 browsers
+
+Description:
+The application does not check for concurrent modifications and last update wins all the time
+
+Steps to reproduce:
+1. In Browser1 login and navigate to "Topic Hub"
+2. Select topic "Topic 1"
+3. In Browser2 login and navigate to "Topic Hub"
+4. Select topic "Topic 1"
+5. In Browser1 update "Topic 1" to "Topic 1 Browser1"
+6. Save changes.
+7. In Browser2 update "Topic 1" to "Topic 1 Browser2"
+8. Save changes.
+
+Expected behavior:
+On saving in Browser2 user should be notified that there are modifications on the topic that it is not aware of
+
+Actual behavior:
+Update is performed

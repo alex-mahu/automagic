@@ -1,0 +1,23 @@
+BUG-012
+
+Summary: User can not set up 2FA
+
+Severity: Major
+Priority: Major
+
+Description:
+The application will not send the Futurae link on the mobile device
+
+Steps to reproduce:
+1. Login to the application
+2. Open profile section
+3. Select "Security"
+4. Click on "Set Up Device" on "Secure Two-Factor Authentication"
+5. Click "Start Setup"
+6. Input the security code received on the mobile device
+
+Expected behavior:
+An SMS with links to the app "Futurae" is sent to my mobile device
+
+Actual behavior:
+No SMS is sent to my device

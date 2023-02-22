@@ -1,0 +1,20 @@
+BUG-016
+
+Summary: User and password are not obfuscated when sending login request to backend
+
+Severity: Major
+Priority: Major
+
+Description:
+We can notice that if we follow the network logs that when the user tries to login the user name and password are not obfuscated
+
+Steps to reproduce:
+1. Reach the login page
+2. Insert a user name and password
+3. Click login
+
+Expected behavior:
+User name and password are hashed
+
+Actual behavior:
+The network request contains user name and password

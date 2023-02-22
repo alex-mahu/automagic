@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { APP_URL } from './general-configuration';
 
 /**
  * Read environment variables from file.
@@ -35,7 +36,7 @@ export default defineConfig({
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 5000,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://dev-qa-challenge.dev.sherpany.io',
+    baseURL: APP_URL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

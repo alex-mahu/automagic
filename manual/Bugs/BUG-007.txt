@@ -1,0 +1,21 @@
+BUG-007
+
+Summary: Application is not mobile responsive
+
+Severity: Major
+Priority: Major
+
+Description:
+The application is not mobile responsive
+
+Steps to reproduce:
+0. Use an iPhone 12
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Observe the content
+
+Expected behavior:
+The application is mobile responsive
+
+Actual behavior:
+The application is not mobile responsive

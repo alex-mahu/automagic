@@ -1,0 +1,21 @@
+BUG-003
+
+Summary: Select "From group" and "To group" has truncated text
+
+Severity: Minor
+Priority: Medium
+
+Description:
+When the user uses the global search, it will produce no results
+
+Steps to reproduce:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Click on the "+ Add topic" button
+4. Select values in "From Group" and "To Group" dropdowns
+
+Expected behavior:
+User can identify what it was selected (either hint or stretching the dropdowns -> should be discussed with UX)
+
+Actual behavior:
+Only part of the text is displayed and causes confusion for the user

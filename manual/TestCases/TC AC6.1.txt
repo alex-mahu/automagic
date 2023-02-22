@@ -1,0 +1,13 @@
+TC AC6.1
+
+Description:
+On date pickers end date is updated when user hovers over dates for "Meeting Date"
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Click on the "Meeting date" date picker button
+4. Select a date (in the past) (ex 12 Jan 2023)
+5. Hove mouse over other dates (ex 13 Jan 2023)
+
+Expected: in the date picker component below the filters, the end date updates with the date the mouse is over (ex: 13 Jan 2023)

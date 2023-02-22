@@ -1,0 +1,16 @@
+Hello to you,
+
+AUTOMATION:
+
+In order to run tests run:
+npx playwright test
+in the automagic folder.
+
+In order to view report run:
+npx playwright show-report
+
+MANUAL:
+Test cases are in folder: automagic\manual\TestCases
+Bugs are in folder: automagic\manual\Bugs
+
+Have a nice day!

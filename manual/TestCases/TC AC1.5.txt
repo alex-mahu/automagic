@@ -1,0 +1,17 @@
+TC AC1.5
+
+Description:
+User should be able to select dates for "Created on" past to future
+
+Precondition: Make sure you have at least one topic created today
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Click on the "Created on" date picker button
+	-> Date Picker appears
+4. Select first Date yesterday
+5. Select second Date tomorrow
+6. Date range is selected (displayed below selection button)
+
+Expected: Topic from precondition is displayed

@@ -1,0 +1,14 @@
+TC AC2.1
+
+Description:
+Refreshing the page keeps the preserves the filter
+
+Precondition: Make sure you have at least one topic with meeting date today
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Make sure you have a filter selected (should satisfy the information on topic from preconditions)
+6. Refresh the page
+
+Expected: Filter is preserved and topic from preconditions is displayed

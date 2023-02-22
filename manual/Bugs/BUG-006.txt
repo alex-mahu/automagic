@@ -1,0 +1,21 @@
+BUG-006
+
+Summary: "Topic Hub" is not translated
+
+Severity: Minor
+Priority: Minor
+
+Description:
+We noticed that the "Topic Hub" module name is not translated
+
+Steps to reproduce:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. From the profile section switch language to "Deutsch"
+4. Observe the "Topic Hub" module name
+
+Expected behavior:
+"Topic Hub" is translated to "Themen-Hub"
+
+Actual behavior:
+"Topic Hub" is not translated

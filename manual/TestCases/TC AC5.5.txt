@@ -1,0 +1,16 @@
+TC AC5.5
+
+Description:
+Neither start nor end dates can be selected in the future for "Created on" filter
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Click on the "Created on" date picker button
+4. Clik on a date from the future
+5. Click on today
+6. Click on date from the future
+
+Expected:
+3. Date is not selected
+6. Date is not selected

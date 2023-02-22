@@ -1,0 +1,22 @@
+BUG-011
+
+Summary: Sometimes on refresh the topic list is not stretched to use all space available
+
+Severity: Minor
+Priority: Minor
+
+Preconditions: Have a topic created ("Topic 1")
+
+Description:
+Sometimes when refreshing the browser, the topic list is not fill all space available
+
+Steps to reproduce:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Refresh the browser
+
+Expected behavior:
+On all refresh actions, the topic list fills all space available
+
+Actual behavior:
+Sometimes the topic list does not fill all space available

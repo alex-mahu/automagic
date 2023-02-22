@@ -1,0 +1,25 @@
+TC AC3.1
+
+Description:
+User can clear "Meeting date" filter using the remove button (X)
+
+Precondition:
+TopicA with meeting date today
+TopicB meeting date last week
+TopicC meeting date next week
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Click on the "Meeting date" date picker button
+	-> Date Picker appears
+4. Select first Date tomorrow
+5. Select second Date yesterday
+	-> TopicA appears in the list
+6. Date range is selected (displayed below selection button)
+7. In the applied filter section click on the x for the applied filter
+
+Expected: 
+TopicA, TopicB and TopicC appear in the list
+Filter is cleared
+Reopening the filter again shows no dates selected

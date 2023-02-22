@@ -1,0 +1,23 @@
+TC AC2.3
+
+Description:
+Using a shortcut while a date selection is active sets start and end dates correctly for Meeting Date - "Next 30 days"
+
+Precondition: Make sure you have:
+1 - TopicA with meeting date yesterday
+2 - TopicB with meeting date today
+3 - TopicC with meeting date after today and before 30 days in future
+4 - TopicD with meeting date exactly on 30th day after toady
+5 - TopicE with meeting date exactly on 31st day after today
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Create a filter for "Meeting Date" from today to yesterday
+	-> TopicB is displayed
+4. Reopen the filter for "Meeting Date"
+5. And select "Next 30 days" shortcut
+
+Expected:
+1. Dates are displayed correctly when reopening filter (today -> today + 30 days)
+2. TopicB, TopicC, and TopicD is displayed

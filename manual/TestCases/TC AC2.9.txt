@@ -1,0 +1,23 @@
+TC AC2.9
+
+Description:
+Using a shortcut while a date selection is active sets start and end dates correctly for Created on - "Last 7 days"
+
+Precondition: Make sure you have:
+1 - TopicA created tomorrow (force it in db or with API if possible)
+2 - TopicB created today
+3 - TopicC created before yesterday and after 7 days in the past (so that it does not collide with step 3)
+4 - TopicD created exactly on the 7th day in the past
+5 - TopicE created exactly on the 8th day in the past
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Create a filter for "Created on" from today to yesterday
+	-> TopicB is displayed
+4. Reopen the filter for "Created on"
+5. And select "Last 7 days" shortcut
+
+Expected:
+1. Dates are displayed correctly when reopening filter (today -> today - 7 days)
+2. TopicB, TopicC, and TopicD is displayed

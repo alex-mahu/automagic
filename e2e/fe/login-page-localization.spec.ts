@@ -1,11 +1,11 @@
 import { test } from '@playwright/test';
 import { APP_URL } from '../../general-configuration';
 import { SUPPORTED_LANGUAGES } from '../../source/localization-data';
-import { ErrorLableValidator } from '../../source/pages/error-validator';
+import { ErrorLableValidator } from '../../source/pages/component-error-validator';
 import { LanguageSelector } from '../../source/pages/language-selector';
 import { LandingPage } from '../../source/pages/page-landing';
-import { LoginPassword } from '../../source/pages/page-login-password';
-import { LoginSso } from '../../source/pages/page-login-sso';
+import { LoginPassword } from '../../source/pages/component-login-password';
+import { LoginSso } from '../../source/pages/component-login-sso';
 
 test.beforeEach(async ({ page }) => {
   await page.goto(APP_URL);

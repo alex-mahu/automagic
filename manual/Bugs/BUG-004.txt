@@ -1,0 +1,25 @@
+BUG-004
+
+Summary: Duplicate to a different room does not produce any outcome
+
+Severity: Major
+Priority: Major
+
+Preconditions:
+Have a topic created with name "Topic1"
+
+Description:
+When the user uses the global search, it will produce no results
+
+Steps to reproduce:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Select the "Topic1" topic
+4. From the action buttons (from above the list) click on duplicate
+5. Click on "Duplicate to a different room"
+
+Expected behavior:
+User should be given a prompt to choose the room to where should be duplicated
+
+Actual behavior:
+No action is given to the user

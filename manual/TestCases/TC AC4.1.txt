@@ -1,0 +1,24 @@
+TC AC4.1
+
+Description:
+On end date selection for "Created on" the date picker is closed and filter is applied
+
+Precondition:
+TopicA created 3 days ago
+TopicB created 2 days ago
+TopicC created yesteday
+TopicD created today
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Click on the "Created on" date picker button
+	-> Date Picker appears
+4. Select first Date yesterday
+5. Select second Date 2 days ago
+6. On second selection (click on the 2 days ago date) the date picker closes
+
+Expected: 
+TopicB and TopicC appear in the list
+Filter is displayed as (2 days ago -> yesterday)
+Reopening the filter date selection from 2 days ago -> yesterday

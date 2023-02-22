@@ -1,0 +1,15 @@
+TC AC56.2
+
+Description:
+Neither start nor end dates are updated when filter is already selected for "Created on"
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Click on the "Created on" date picker button
+4. Select date "12 Jan 2023"
+5. Select date "13 Jan 2023"
+6. Open filter
+7. Hover mouse over dates
+
+Expected: start and end dates remain 12-13 Jan 2023

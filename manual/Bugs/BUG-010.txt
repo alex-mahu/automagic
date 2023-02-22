@@ -1,0 +1,27 @@
+BUG-010
+
+Summary: Infinite spinner on save when user saves changes on a deleted topic
+
+Severity: Major
+Priority: Major
+
+Preconditions: Have a topic created ("Topic 1")
+Be logged in 2 browsers
+
+Description:
+The application does not check for concurrent modifications and last update wins all the time
+
+Steps to reproduce:
+1. In Browser1 login and navigate to "Topic Hub"
+2. Select topic "Topic 1"
+3. In Browser2 login and navigate to "Topic Hub"
+4. Select topic "Topic 1"
+5. In Browser1 delete the topic "Topic 1"
+7. In Browser2 update "Topic 1" to "Topic 1 Browser2"
+8. Save changes.
+
+Expected behavior:
+User is notified that the topic was already deleted and given an option to save a new topic or discard changes
+
+Actual behavior:
+Save button has an infinite spinner on it

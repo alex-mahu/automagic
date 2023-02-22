@@ -1,0 +1,15 @@
+TC AC1.6
+
+Description:
+Filter is preserved for "Created on"
+
+Precondition: Make sure you have at least one topic created today
+
+Steps:
+1. Login to the application
+2. Navigate to "Topic Hub"
+3. Create a filter for "Created on"
+4. Leave module
+5. Return to module (my case reselect room)
+
+Expected: Filter is preserved and topic from precondition is displayed

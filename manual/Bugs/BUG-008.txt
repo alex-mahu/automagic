@@ -1,0 +1,20 @@
+BUG-008
+
+Summary: Contact support mail link does not work 
+
+Severity: Minor
+Priority: Minor
+
+Description:
+When the user tries to contact support he will notice that the link is broken
+
+Steps to reproduce:
+1. Login to the application
+2. Open the "Information & Resources" popover ((?)near the profile icon)
+3. Select support@sherpany.com
+
+Expected behavior:
+Mail client is opened with support@sherpany.com in the to field
+
+Actual behavior:
+User is navigated to a broken link

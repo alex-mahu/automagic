@@ -1,0 +1,18 @@
+TC AC2.5
+
+Description:
+"No date" shortcut is applied correctly for "Meeting date" filter
+
+Preconditions:
+Use preconditions from AC2.2
+Create TopicX with no meeting date selected
+
+Steps:
+* Same as AC2.2
+6. Open "Meeting date" filter again
+7. Select "No date"
+
+Expected:
+1. Dates are displayed correctly when reopening filter (today -> today - 30 days)
+2. Another filter with "No date" appears
+3. TopicB, TopicC, TopicD and TopicX are displayed
