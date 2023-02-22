@@ -1,4 +1,5 @@
 import { expect, Locator, Page } from "@playwright/test";
+import { LANDING_PAGE_LOCALIZATION } from "../localization-data";
 import { getSwitchButtonLocator, LOGIN_BUTTON_LOCATOR, LOGIN_EMAIL_INPUT_LOCATOR, LOGIN_EMAIL_LABEL_LOCATOR, LOGIN_LABEL_LOCATOR, OR_LABEL_LOCATOR } from "../locators";
 
 export class LoginSso {
@@ -41,5 +42,21 @@ export class LoginSso {
         await expect.soft(this.orLabel).toBeVisible();
 
         await expect.soft(this.switchToPasswordLoginButton).toBeVisible();
+    }
+
+    public async checkElementsForLanguage(language: string) {
+        const localization = LANDING_PAGE_LOCALIZATION.sso;
+        await expect.soft(this.loginLabel).toHaveText(localization.title[language], { timeout: 1000 });
+        await expect.soft(this.emailLabel).toHaveText(localization.email[language], { timeout: 1000 });
+        await expect.soft(this.loginButton).toHaveText(localization.login[language], { timeout: 1000 });
+        await expect.soft(this.orLabel).toHaveText(LANDING_PAGE_LOCALIZATION.or[language], { timeout: 1000 });
+        await expect.soft(this.switchToPasswordLoginButton).toHaveText(localization.switch[language], { timeout: 1000 });
+    }
+
+    public async login(email?: string) {
+        if (email) {
+            await this.emailInput.type(email);
+        }
+        await this.loginButton.click();
     }
 }

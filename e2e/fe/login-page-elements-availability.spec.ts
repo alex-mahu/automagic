@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
-import { APP_URL } from '../general-configuration';
-import { LandingPage } from '../source/pages/page-landing';
-import { LoginPassword } from '../source/pages/page-login-password';
-import { LoginSso } from '../source/pages/page-login-sso';
+import { APP_URL } from '../../general-configuration';
+import { LandingPage } from '../../source/pages/page-landing';
+import { LoginPassword } from '../../source/pages/page-login-password';
+import { LoginSso } from '../../source/pages/page-login-sso';
 
 test.beforeEach(async ({ page }) => {
     await page.goto(APP_URL);

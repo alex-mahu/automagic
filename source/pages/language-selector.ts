@@ -6,12 +6,12 @@ export class LanguageSelector {
 
     constructor(page: Page) {
         this.page = page;
-        this.languageSelector = page.locator('#language-switcher');
+        this.languageSelector = page.locator('.ant-select-selector');
     }
 
     public async switchToLanguage(language: string) {
         const currentLanguage = await this.languageSelector.textContent();
-        if (language == currentLanguage) {
+        if (language === currentLanguage) {
             return
         }
 
@@ -26,6 +26,7 @@ export class LanguageSelector {
     }
 
     private async openLanguagePopover() {
+        await this.languageSelector.scrollIntoViewIfNeeded();
         await this.languageSelector.click();
     }
 

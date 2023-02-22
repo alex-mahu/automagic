@@ -1,4 +1,5 @@
 import { expect, Locator, Page } from '@playwright/test';
+import { LANDING_PAGE_LOCALIZATION } from '../localization-data';
 
 export class LandingPage {
     private readonly page: Page;
@@ -12,6 +13,7 @@ export class LandingPage {
     private readonly privacyPolicyHyperlink: Locator;
     private readonly termsOfUseHyperlink: Locator;
 
+    private readonly downloadOnLable: Locator;
     private readonly appleStoreHyperlink: Locator;
     private readonly androidStoreHyperlink: Locator;
     private readonly windowsStoreHyperlink: Locator;
@@ -31,6 +33,7 @@ export class LandingPage {
         this.privacyPolicyHyperlink = page.locator('a[href="https://www.sherpany.com/privacy-policy/"]');
         this.termsOfUseHyperlink = page.locator('a[href="https://app.sherpany.com/terms/"]');
 
+        this.downloadOnLable = page.locator('[class*="NativeAppsLinks_label"]')
         this.appleStoreHyperlink = page.locator('a[href="https://itunes.apple.com/app/id1172873177"]');
         this.androidStoreHyperlink = page.locator('a[href="https://play.google.com/store/apps/details?id=ch.sherpany.boardroom"]');
         this.windowsStoreHyperlink = page.locator('a[href="https://www.microsoft.com/store/apps/9NH1PR95ZXF7"]');
@@ -52,6 +55,7 @@ export class LandingPage {
         await expect.soft(this.privacyPolicyHyperlink).toBeVisible();
         await expect.soft(this.termsOfUseHyperlink).toBeVisible();
 
+        await expect.soft(this.downloadOnLable).toBeVisible();
         await expect.soft(this.appleStoreHyperlink).toBeVisible();
         await expect.soft(this.androidStoreHyperlink).toBeVisible();
         await expect.soft(this.windowsStoreHyperlink).toBeVisible();
@@ -59,5 +63,18 @@ export class LandingPage {
         await expect.soft(this.noAccountYet).toBeVisible();
         await expect.soft(this.requestDemoHyperlink).toBeVisible();
         await expect.soft(this.contactSupportHyperlink).toBeVisible();
+    }
+
+    public async checkElementsForLanguage(language: string) {
+        await expect.soft(this.noAccountYet).toHaveText(LANDING_PAGE_LOCALIZATION.noAccount[language], { timeout: 1000 });
+        await expect.soft(this.requestDemoHyperlink).toHaveText(LANDING_PAGE_LOCALIZATION.requestDemo[language], { timeout: 1000 });
+        await expect.soft(this.contactSupportHyperlink).toHaveText(LANDING_PAGE_LOCALIZATION.getHelp[language], { timeout: 1000 });
+
+        await expect.soft(this.sherpanySiteHyperlink).toHaveText('Sherpany.com', { timeout: 1000 });
+        await expect.soft(this.meetingResourcesHyperlink).toHaveText(LANDING_PAGE_LOCALIZATION.meetingResources[language], { timeout: 1000 });
+        await expect.soft(this.privacyPolicyHyperlink).toHaveText(LANDING_PAGE_LOCALIZATION.privacyPolicy[language], { timeout: 1000 });
+        await expect.soft(this.termsOfUseHyperlink).toHaveText(LANDING_PAGE_LOCALIZATION.termsOfUse[language], { timeout: 1000 });
+
+        await expect.soft(this.downloadOnLable).toHaveText(LANDING_PAGE_LOCALIZATION.downloadOn[language], { timeout: 1000 });
     }
 }

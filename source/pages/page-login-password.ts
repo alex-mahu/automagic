@@ -1,4 +1,5 @@
 import { expect, Locator, Page } from "@playwright/test";
+import { LANDING_PAGE_LOCALIZATION } from "../localization-data";
 import { LOGIN_LABEL_LOCATOR, LOGIN_EMAIL_LABEL_LOCATOR, LOGIN_EMAIL_INPUT_LOCATOR, getSwitchButtonLocator, LOGIN_BUTTON_LOCATOR, OR_LABEL_LOCATOR } from "../locators";
 
 export class LoginPassword {
@@ -19,7 +20,7 @@ export class LoginPassword {
 
     private readonly switchToSsoLoginButton: Locator;
 
-    constructor(page:Page) {
+    constructor(page: Page) {
         this.page = page;
         this.loginLabel = page.locator(LOGIN_LABEL_LOCATOR);
 
@@ -54,7 +55,31 @@ export class LoginPassword {
         await expect.soft(this.switchToSsoLoginButton).toBeVisible();
     }
 
+    public async login(email?: string, password?: string) {
+        if (email) {
+            await this.emailInput.type(email);
+        }
+        if (password) {
+            await this.passwordInput.type(password);
+        }
+        await this.loginButton.click();
+    }
+
     public async switchToSsoLogin() {
         await this.switchToSsoLoginButton.click();
+        // wait for text to load
+        await this.page.waitForTimeout(1000);
     }
+
+    public async checkElementsForLanguage(language: string) {
+        const localization = LANDING_PAGE_LOCALIZATION.password;
+        await expect.soft(this.loginLabel).toHaveText(localization.title[language], { timeout: 1000 });
+        await expect.soft(this.emailLabel).toHaveText(localization.email[language], { timeout: 1000 });
+        await expect.soft(this.passwordLabel).toHaveText(localization.password[language], { timeout: 1000 });
+        await expect.soft(this.forgotPasswordHyperlink).toHaveText(localization.forgotPassword[language], { timeout: 1000 });
+        await expect.soft(this.loginButton).toHaveText(localization.login[language], { timeout: 1000 });
+        await expect.soft(this.orLabel).toHaveText(LANDING_PAGE_LOCALIZATION.or[language], { timeout: 1000 });
+        await expect.soft(this.switchToSsoLoginButton).toHaveText(localization.switch[language], { timeout: 1000 });
+    }
+
 }

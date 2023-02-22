@@ -33,14 +33,14 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
-    actionTimeout: 0,
+    actionTimeout: 5000,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://localhost:3000',
+    baseURL: 'https://dev-qa-challenge.dev.sherpany.io',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    //headless: false,
-    //viewport: { width: 1920, height: 1040 }
+    // headless: false,
+    // viewport: { width: 3000, height: 3000 }
   },
 
   /* Configure projects for major browsers */
@@ -48,7 +48,8 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'],
-        headless: false
+        headless: false,
+        viewport: { width: 1900, height: 1200 }
       },
     },
 
